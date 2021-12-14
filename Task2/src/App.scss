@@ -67,7 +67,6 @@
   }
   .wrapper {
     display: flex;
-    // align-items: flex-start;
   }
   .sidebar {
     min-width: 52px;
@@ -98,13 +97,13 @@
     flex-flow: row wrap;
     .add-block {
       width: 1228px;
-      max-width: 89%;
+      max-width: 94%;
       height: 72px;
       input[type="text"] {
         padding: 12px;
         outline: none;
         width: 1170px;
-        max-width: 89%;
+        max-width: 90%;
         height: 40px;
         border: 1px solid #ECECEC;
         box-sizing: border-box;
@@ -167,6 +166,7 @@
         }
       }
       .task-text {
+        overflow: hidden;
         font-size: 14px;
         line-height: 19px;
         margin: auto auto auto 8px;
@@ -187,10 +187,20 @@
 }
 @media screen and (max-width: 1140px) {
   .tasks {
+    width: 100vw;
+    height: max-content;
     .content-container {
+      width: calc(100vw - 52px - 24px);
       display: block;
+      height: max-content;
       .add-block {
         display: flex;
+        input[type="text"] {
+          margin-right: 0;
+        }
+      }
+      .tasks-list {
+        max-width: 94%;
       }
     }
   }
